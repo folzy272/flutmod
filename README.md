@@ -1,17 +1,51 @@
-# dart33
+# Flutter — Лічильник із двома екранами
 
-A new Flutter project.
+Навчальний застосунок на **Flutter (Dart)** для завдання №3 «State Management та навігація».
 
-## Getting Started
+## Опис програми
 
-This project is a starting point for a Flutter application.
+Програма містить два екрани:
 
-A few resources to get you started if this is your first Flutter project:
+- **HomeScreen** — відображає лічильник із початковим значенням 0. Дозволяє вводити власне число, збільшувати його на 1 і переходити на другий екран.
+- **DetailsScreen** — приймає значення лічильника через конструктор, відображає його та дозволяє повернутися назад.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Після повернення на головний екран значення лічильника зберігається.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Використані технології
+
+- Flutter і Dart
+- StatefulWidget
+- setState()
+- Navigator.push() і Navigator.pop()
+- TextField і TextEditingController
+
+## Запуск програми
+
+1. Відкрити Flutter-проєкт у Visual Studio Code.
+2. Відкрити термінал у папці з `pubspec.yaml`.
+3. Виконати `flutter pub get`.
+4. Запустити програму командою `flutter run -d chrome`.
+
+## Приклад роботи
+
+1. Ввести число 25.
+2. Натиснути «Встановити число».
+3. Натиснути «+1» — отримаємо 26.
+4. Натиснути «Детальніше» — відкриється екран зі значенням 26.
+5. Натиснути «Назад» — лічильник залишиться 26.
+
+## Виконані вимоги
+
+- [x] Створено два екрани HomeScreen і DetailsScreen.
+- [x] Реалізовано цілочисельний лічильник.
+- [x] Зміна стану здійснюється через setState().
+- [x] Перехід між екранами здійснюється через Navigator.
+- [x] Значення передається через конструктор DetailsScreen.
+- [x] Значення лічильника зберігається після повернення.
+- [x] Додано можливість введення власного числа.
+
+## Висновок
+
+Під час виконання завдання було створено Flutter-застосунок із двома екранами. Реалізовано керування станом за допомогою setState(), навігацію між екранами та передачу даних через конструктор. Додатково створено поле для введення чисел користувачем.
+
+Значення зберігається під час переходів між екранами, але скидається після повного перезапуску застосунку.
